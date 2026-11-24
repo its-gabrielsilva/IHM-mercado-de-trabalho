@@ -105,6 +105,7 @@ A entrega em PDF contém User Story, Análise da Tarefa, Fluxo de Informação (
 ## Autor
 
 Gabriel Silva Lopes
+
 Engenharia de Software — Inatel
 
 ## Licença
