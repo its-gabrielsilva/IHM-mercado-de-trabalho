@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inatel - Mercado de Trabalho</title>
+<link rel="stylesheet" href="styles_pagina.css">
+</head>
+<body>
+<div class="app">
+<div class="toast" id="toast"></div>
+<header class="topo" id="topo"></header>
+<main>
+<!-- INÍCIO -->
+<section class="tela on" id="home">
+ <div class="card sauda"><h3>Olá, Gabriel!</h3>
+  <p>🔔 Há <b id="nNovas">3</b> vagas novas compatíveis com Eng. de Software.</p>
+  <p>✉️ Você possui uma pendência no financeiro...</p></div>
+ <div class="grade">
+  <button class="atalho" onclick="go('vagas')"><i>💼</i>Mercado de Trabalho<span class="badge" id="bdg">3</span></button>
+  <button class="atalho"><i>📅</i>Horários</button><button class="atalho"><i>📚</i>Biblioteca</button>
+ </div>
+ <div class="card"><b>Aulas de hoje</b><p style="font-size:13px;margin:6px 0 0">S05 - Interação Homem-máquina · P1-S12 · 17:30</p></div>
+</section>
+<!-- VAGAS -->
+<section class="tela" id="vagas">
+ <div class="lbl">Área</div><div class="chips" id="fArea"></div>
+ <div class="lbl">Modalidade</div><div class="chips" id="fMod"></div>
+ <div class="lbl">Carga horária</div><div class="chips" id="fCarga"></div>
+ <div class="lbl" id="cont"></div><div id="lista"></div>
+</section>
+<!-- DETALHE -->
+<section class="tela" id="detalhe"><div class="card" id="detCorpo"></div>
+ <button class="btn" onclick="go('perfil')">Candidatar-me</button></section>
+<!-- PERFIL -->
+<section class="tela" id="perfil">
+ <div class="steps"><div class="ok">1 Vaga</div><div class="on">2 Perfil</div><div>3 Revisão</div></div>
+ <div class="pend" id="pend">⚠️ Complete os campos destacados para enviar sua candidatura. O que você já preencheu foi mantido.</div>
+ <div class="card"><b>Dados acadêmicos</b> <small style="color:var(--ok)">✔ preenchidos pelo Inatel</small>
+  <label>Nome</label><input type="text" value="Gabriel Silva Lopes" readonly>
+  <label>Curso · Período</label><input type="text" value="Engenharia de Software · 5º período" readonly>
+  <label>CR (nota média)</label><input type="text" value="8,2" readonly></div>
+ <div class="card"><b>Contato</b>
+  <label>E-mail</label><input type="email" id="email" value="gabriel.lopes@gec.inatel.br">
+  <div class="msgerro" id="eEmail">Informe um e-mail válido.</div>
+  <label>Telefone</label><input type="tel" id="tel" placeholder="(35) 9 0000-0000" maxlength="16">
+  <div class="msgerro" id="eTel">Informe o telefone com DDD (11 dígitos).</div></div>
+ <div class="card"><b>Currículo (PDF)</b>
+  <div class="drop" id="drop">Nenhum arquivo anexado<br><br>
+   <label class="btn sec" style="display:block;margin:0 0 8px;padding:10px;color:var(--azul)">📎 Escolher PDF<input type="file" id="arq" accept=".pdf,application/pdf" hidden></label>
+   <button class="btn sec" onclick="usarModelo()">📝 Usar modelo de currículo</button></div>
+  <div class="bar" id="bar" style="display:none"><b id="barIn"></b></div>
+  <div class="msgerro" id="eCurr">Anexe um currículo em PDF (até 2 MB).</div>
+  <div id="arqOk"></div></div>
+ <button class="btn" onclick="revisar()">Revisar candidatura</button>
+</section>
+<!-- REVISÃO -->
+<section class="tela" id="revisao">
+ <div class="steps"><div class="ok">1 Vaga</div><div class="ok">2 Perfil</div><div class="on">3 Revisão</div></div>
+ <div class="card" id="revCorpo"></div>
+ <label class="ck"><input type="checkbox" id="aceite"> Autorizo o Inatel a compartilhar meus dados acadêmicos e currículo com a empresa.</label>
+ <div class="msgerro" id="eAceite">Confirme a autorização para enviar.</div>
+ <button class="btn" id="bEnv" onclick="enviar()">Confirmar envio</button>
+ <button class="btn sec" onclick="go('perfil')">Voltar e editar</button>
+</section>
+<!-- SUCESSO -->
+<section class="tela" id="sucesso" style="text-align:center">
+ <div class="ok-ic">✓</div><h3 style="margin:0">Candidatura enviada!</h3>
+ <div class="card" style="margin-top:14px;text-align:left" id="sucCorpo"></div>
+ <button class="btn" onclick="go('cands')">Acompanhar candidatura</button>
+ <button class="btn sec" onclick="go('vagas')">Buscar outras vagas</button>
+</section>
+<!-- CANDIDATURAS -->
+<section class="tela" id="cands"><div id="listaC"></div></section>
+</main>
+<nav><button class="on" data-n="home" onclick="go('home')"><i>🏠</i>Início</button>
+<button data-n="vagas" onclick="go('vagas')"><i>💼</i>Vagas</button>
+<button data-n="cands" onclick="go('cands')"><i>📋</i>Candidaturas</button></nav>
+</div>
+
+<!-- O script do componente deve ficar antes do script da página -->
+<script src="script_componente.js"></script>
+<script src="script_pagina.js"></script>
+</body>
+</html>

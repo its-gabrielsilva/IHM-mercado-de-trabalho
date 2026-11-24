@@ -1,0 +1,54 @@
+/* Estilos da página - Mercado de Trabalho (App Inatel) */
+:root{--azul:#126ae2;--azul2:#0b4fb0;--fundo:#eef1f5;--txt:#1f2933;--suave:#52606d;--ok:#1e8e3e;--warn:#f29900;--err:#d93025}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Roboto,Arial,sans-serif;background:#d9dee5;color:var(--txt)}
+.app{max-width:420px;height:100vh;margin:0 auto;background:var(--fundo);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.topo{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--fundo)}
+.topo h1{margin:0;font-size:26px;font-style:italic;font-weight:800;color:var(--azul)}
+.topo h2{margin:0;font-size:17px;flex:1;text-align:center}
+.ib{background:none;border:0;color:var(--azul);font-size:26px;cursor:pointer;border-radius:8px;width:40px;height:40px}
+.ib:hover{background:rgba(18,106,226,.1)}
+main{flex:1;overflow-y:auto;padding:0 16px 16px}
+.tela{display:none;animation:in .35s ease}.tela.on{display:block}
+@keyframes in{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.12);padding:16px;margin-bottom:14px}
+.sauda{border-left:5px solid var(--azul)}.sauda h3{margin:0 0 8px;font-size:22px}.sauda p{margin:6px 0 0;font-size:13px}
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.atalho{background:#fff;border:0;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.12);padding:14px 4px;font-size:12px;color:var(--txt);cursor:pointer;position:relative;transition:.2s}
+.atalho:hover{transform:translateY(-3px);box-shadow:0 6px 12px rgba(18,106,226,.25)}
+.atalho i{display:block;font-style:normal;font-size:26px;margin-bottom:4px}
+.badge{position:absolute;top:6px;right:8px;background:var(--err);color:#fff;border-radius:50px;font-size:10px;padding:2px 6px;font-weight:700}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 10px}
+.chip{white-space:nowrap;border:1.5px solid var(--azul);background:#fff;color:var(--azul);border-radius:50px;padding:6px 14px;font-size:13px;cursor:pointer;transition:.2s}
+.chip.on{background:var(--azul);color:#fff}
+.lbl{font-size:12px;color:var(--suave);margin:4px 0 2px;font-weight:600}
+.vaga{cursor:pointer;transition:.2s;position:relative}.vaga:hover{transform:translateY(-2px)}
+.tag{display:inline-block;font-size:11px;border-radius:50px;padding:3px 10px;margin:6px 6px 0 0;background:#e3eefc;color:var(--azul2)}
+.btn{width:100%;border:0;border-radius:50px;background:var(--azul);color:#fff;font-size:15px;font-weight:600;padding:13px;cursor:pointer;transition:.2s;margin-top:6px}
+.btn:hover{background:var(--azul2)}.btn.sec{background:#fff;color:var(--azul);border:1.5px solid var(--azul)}.btn:disabled{opacity:.5}
+label{display:block;font-size:12px;font-weight:600;color:var(--suave);margin:10px 0 3px}
+input[type=text],input[type=email],input[type=tel]{width:100%;padding:10px;border:1.5px solid #cbd2d9;border-radius:8px;font-size:14px}
+input:focus{outline:0;border-color:var(--azul)}input.erro{border-color:var(--err);background:#fdeceb}input[readonly]{background:#f3f5f8;color:var(--suave)}
+.msgerro{color:var(--err);font-size:12px;margin-top:3px;display:none}.msgerro.on{display:block}
+.steps{display:flex;gap:6px;margin:4px 0 14px}.steps div{flex:1;text-align:center;font-size:11px;color:var(--suave);border-top:4px solid #cbd2d9;padding-top:4px}
+.steps .on{border-color:var(--azul);color:var(--azul);font-weight:700}.steps .ok{border-color:var(--ok)}
+.drop{border:2px dashed var(--azul);border-radius:12px;padding:16px;text-align:center;font-size:13px;color:var(--azul);background:#f5f9ff}
+.drop.erro{border-color:var(--err);background:#fdeceb;color:var(--err)}
+.arq{display:flex;align-items:center;gap:8px;background:#e6f4ea;border-radius:8px;padding:10px;font-size:13px;margin-top:8px}
+.bar{height:6px;background:#dbe3ec;border-radius:6px;overflow:hidden;margin-top:8px}.bar b{display:block;height:100%;width:0;background:var(--azul);transition:width .15s}
+.lin{display:flex;justify-content:space-between;font-size:13px;padding:7px 0;border-bottom:1px solid #eef1f5}.lin span:first-child{color:var(--suave)}
+.pend{background:#fff4e0;border-left:4px solid var(--warn);padding:10px;font-size:13px;border-radius:8px;margin-bottom:12px;display:none}.pend.on{display:block}
+.ck{display:flex;gap:8px;font-size:13px;align-items:flex-start;margin:12px 0}
+.ok-ic{width:78px;height:78px;border-radius:50%;background:var(--ok);color:#fff;font-size:44px;display:flex;align-items:center;justify-content:center;margin:12px auto;animation:pop .5s}
+@keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+.tl{display:flex;justify-content:space-between;margin:12px 0 4px;position:relative}
+.tl:before{content:"";position:absolute;top:9px;left:10%;right:10%;height:3px;background:#cbd2d9}
+.tl div{flex:1;text-align:center;font-size:10px;position:relative;color:var(--suave)}
+.tl div:before{content:"";display:block;width:20px;height:20px;border-radius:50%;background:#cbd2d9;margin:0 auto 4px;border:3px solid #fff}
+.tl .f:before{background:var(--azul)}.tl .f{color:var(--azul);font-weight:700}
+nav{display:flex;background:#fff;box-shadow:0 -2px 6px rgba(0,0,0,.1)}
+nav button{flex:1;background:none;border:0;padding:8px 0;font-size:11px;color:var(--suave);cursor:pointer}
+nav button i{display:block;font-style:normal;font-size:20px}nav button.on{color:var(--azul);font-weight:700}
+.toast{position:absolute;left:16px;right:16px;top:-80px;background:#1f2933;color:#fff;border-radius:12px;padding:12px;font-size:13px;transition:top .4s;z-index:9}
+.toast.on{top:10px}
+.vazio{text-align:center;color:var(--suave);padding:30px 0;font-size:14px}

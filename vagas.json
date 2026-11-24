@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "t": "Estágio em Desenvolvimento Web",
+    "e": "TechSul Sistemas",
+    "area": "Desenvolvimento",
+    "mod": "Híbrido",
+    "carga": "6h",
+    "bolsa": "R$ 1.800",
+    "pmin": 4,
+    "cursos": [
+      "Engenharia de Software",
+      "Engenharia de Computação"
+    ],
+    "nova": 1,
+    "desc": "Atuar no front-end e back-end de sistemas internos com React e Node.js."
+  },
+  {
+    "id": 2,
+    "t": "Estágio em QA e Testes",
+    "e": "Pixel Labs",
+    "area": "Qualidade",
+    "mod": "Remoto",
+    "carga": "4h",
+    "bolsa": "R$ 1.400",
+    "pmin": 3,
+    "cursos": [
+      "Engenharia de Software"
+    ],
+    "nova": 1,
+    "desc": "Criar casos de teste, automatizar rotinas e reportar falhas ao time."
+  },
+  {
+    "id": 3,
+    "t": "Estágio em Dados e BI",
+    "e": "Mineira Analytics",
+    "area": "Dados",
+    "mod": "Presencial",
+    "carga": "6h",
+    "bolsa": "R$ 1.700",
+    "pmin": 5,
+    "cursos": [
+      "Engenharia de Software",
+      "Engenharia de Computação"
+    ],
+    "nova": 1,
+    "desc": "Construir dashboards e pipelines de dados para clientes do setor industrial."
+  },
+  {
+    "id": 4,
+    "t": "Estágio em Redes 5G",
+    "e": "TelcoNet",
+    "area": "Telecom",
+    "mod": "Presencial",
+    "carga": "6h",
+    "bolsa": "R$ 2.000",
+    "pmin": 6,
+    "cursos": [
+      "Engenharia de Telecomunicações"
+    ],
+    "nova": 0,
+    "desc": "Apoiar o planejamento e testes de rede móvel."
+  },
+  {
+    "id": 5,
+    "t": "Estágio em Desenvolvimento Mobile",
+    "e": "AppFactory",
+    "area": "Desenvolvimento",
+    "mod": "Remoto",
+    "carga": "4h",
+    "bolsa": "R$ 1.500",
+    "pmin": 7,
+    "cursos": [
+      "Engenharia de Software"
+    ],
+    "nova": 0,
+    "desc": "Desenvolver telas e integrações para apps Android e iOS."
+  }
+]

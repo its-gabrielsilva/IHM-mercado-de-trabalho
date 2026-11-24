@@ -1,0 +1,42 @@
+:host { display: block; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Cartão de uma vaga (shadow DOM) */
+.vaga {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  padding: 16px;
+  margin-bottom: 14px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1f2933;
+}
+.vaga:hover { transform: translateY(-2px); }
+.vaga h4 { margin: 0 0 2px; font-size: 15px; padding-right: 56px; }
+.vaga small { color: #52606d; }
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  border-radius: 50px;
+  padding: 3px 10px;
+  margin: 6px 6px 0 0;
+  background: #e3eefc;
+  color: #0b4fb0;
+}
+.nova { background: #126ae2; color: #fff; }
+
+/* Percentual de compatibilidade (cor definida pelo JS) */
+.comp {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 50px;
+  padding: 4px 10px;
+}
